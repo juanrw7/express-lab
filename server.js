@@ -2,7 +2,7 @@
 
 import express from "express"
 
-import { songs } from ".data/songs-data.js"
+import { songs } from "./data/songs-data.js"
 
 // create Express app
 
@@ -32,7 +32,7 @@ app.get('/whatever', function(req, res) {
 })
 
 app.get('/songs', function(req, res) {
-  res.render('songs/index', {
+  res.render('songs', {
     songs: songs
   })
 })
