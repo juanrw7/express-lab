@@ -7,7 +7,7 @@ import express from 'express'
 const app = express()
 
 // configure the app (app.set)
-
+app.set('view engine', 'ejs')
 
 
 // mount Middleware (app.use)
@@ -19,6 +19,14 @@ const app = express()
 
 app.get('/', function(req, res) {
   res.send('<h1>hello again</h1>')
+})
+
+app.get('/home', function(req, res) {
+  res.send('<h1>HOME PAGE</h1>')
+})
+
+app.get('/songs', function(req, res) {
+  res.render("songs")
 })
 
 
