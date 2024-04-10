@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 })
 
 app.get('/home', function(req, res) {
-  res.redirect('/songs')
+  res.render('home')
 })
 
 app.get('/music', function(req, res) {
@@ -32,7 +32,7 @@ app.get('/music', function(req, res) {
 })
 
 app.get('/songs', function(req, res) {
-  res.render('songs', {
+  res.render('songs/index', {
     songs: songs
   })
 })
