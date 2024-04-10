@@ -24,11 +24,11 @@ app.get('/', function(req, res) {
 })
 
 app.get('/home', function(req, res) {
-  res.send('<h1>HOME PAGE</h1>')
+  res.redirect('/songs')
 })
 
-app.get('/whatever', function(req, res) {
-  res.render("songs")
+app.get('/music', function(req, res) {
+  res.redirect('/songs')
 })
 
 app.get('/songs', function(req, res) {
@@ -36,7 +36,6 @@ app.get('/songs', function(req, res) {
     songs: songs
   })
 })
-
 
 // tell the app to listen on port 3000
 
