@@ -1,6 +1,8 @@
 // import modules
 
-import express from 'express'
+import express from "express"
+
+import { songs } from ".data/songs-data.js"
 
 // create Express app
 
@@ -25,8 +27,14 @@ app.get('/home', function(req, res) {
   res.send('<h1>HOME PAGE</h1>')
 })
 
-app.get('/songs', function(req, res) {
+app.get('/whatever', function(req, res) {
   res.render("songs")
+})
+
+app.get('/songs', function(req, res) {
+  res.render('songs/index', {
+    songs: songs
+  })
 })
 
 
